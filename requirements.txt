@@ -1,0 +1,5 @@
+pyaudiowpatch
+numpy
+whisper
+pyannote.audio
+tkinter 
