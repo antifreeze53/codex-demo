@@ -7,8 +7,11 @@ mock_pyaudio = MagicMock()
 mock_pyaudio.paInt16 = 1
 mock_pyaudio.PyAudio = MagicMock()
 
-with patch('pyaudiowpatch', mock_pyaudio):
-    from app import Recorder
+# モジュールレベルでモックを設定
+import sys
+sys.modules['pyaudiowpatch'] = mock_pyaudio
+
+from app import Recorder
 
 def test_recorder_initialization():
     """Recorderクラスの初期化テスト"""
