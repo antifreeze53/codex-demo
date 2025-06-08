@@ -1,6 +1,14 @@
 import pytest
 import numpy as np
-from app import Recorder
+from unittest.mock import MagicMock, patch
+
+# pyaudiowpatchをモック
+mock_pyaudio = MagicMock()
+mock_pyaudio.paInt16 = 1
+mock_pyaudio.PyAudio = MagicMock()
+
+with patch('pyaudiowpatch', mock_pyaudio):
+    from app import Recorder
 
 def test_recorder_initialization():
     """Recorderクラスの初期化テスト"""
