@@ -1,4 +1,4 @@
-pyaudiowpatch
+pyaudio
 numpy
 whisper
 pyannote.audio
