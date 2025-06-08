@@ -2,4 +2,3 @@ pyaudio
 numpy
 openai-whisper
 pyannote.audio==3.3.2
-tkinter 
