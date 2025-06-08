@@ -21,7 +21,7 @@ jobs:
     - name: Install system dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y portaudio19-dev python3-pyaudio
+        sudo apt-get install -y portaudio19-dev python3-pyaudio ffmpeg
         
     - name: Install dependencies
       run: |
